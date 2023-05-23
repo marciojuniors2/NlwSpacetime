@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "routes/(.*)"
+    }
+  ],
+    "env": {
+      "DATABASE_URL": "file:./prisma/dev.db",
+      "GITHUB_CLIENT_ID": "780228d25ff4fd206d4c",
+      "GITHUB_CLIENT_SECRET": "fb5bb78001d7c039bf799ce7dc927cb8e00bfed3"
+    }
+}
+
+
+  
